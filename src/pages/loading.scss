@@ -1,0 +1,35 @@
+@import '../main.scss';
+
+.lscreen {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: c(bg);
+  z-index: 997;
+  @include grid-center;
+  font-size: 3000px;
+  transition: 1s all;
+  h1 {
+    color: c(text);
+    font-size: 150px;
+    animation-name: loading-text;
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    @media (max-width: 500px) {
+      font-size: 20px;
+    }
+  }
+}
+
+@keyframes loading-text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

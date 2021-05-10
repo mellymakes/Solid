@@ -1,0 +1,58 @@
+@import '../../../../main.scss';
+.mhc {
+  min-height: 500px;
+  position: relative;
+  padding: 100px auto;
+  color: c(text);
+}
+
+.mhci {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+  grid-gap: 40px;
+  //   margin: 100px auto;
+  padding: 100px 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.mhcc {
+  background-color: c(sec);
+  padding: 20px;
+  @include box-shadow;
+  &__title {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  &__grid {
+  }
+  &__sect {
+    position: relative;
+    margin: 30px 0;
+    p {
+      text-align: center;
+      font-size: 20px;
+    }
+    svg {
+      position: absolute;
+      width: 20px;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      fill: c(red);
+    }
+  }
+
+  &__bottom {
+    @include grid-center;
+    p {
+      font-weight: 900;
+      font-size: 23px;
+      text-align: center;
+    }
+  }
+}

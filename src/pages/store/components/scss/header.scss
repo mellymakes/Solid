@@ -1,0 +1,55 @@
+@import '../../../../main.scss';
+
+.msh {
+  background-color: blue;
+  width: 100%;
+  min-height: 110vh;
+  background-size: cover;
+  position: relative;
+
+  &__img-overlay {
+    background-color: rgba($color: #000000, $alpha: 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__text {
+    z-index: 50;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 400;
+
+    @include absolute-center;
+
+    h1 {
+      margin-bottom: 0;
+    }
+
+    span {
+      font-weight: 900;
+    }
+
+    p {
+      font-size: 23px;
+      font-weight: 100;
+      margin: 50px auto;
+      margin-bottom: 50px;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .msh__text {
+    font-size: 20px;
+
+    p {
+      font-size: 15px;
+      line-height: 1.6em;
+      //   margin: 20px auto;
+    }
+  }
+}

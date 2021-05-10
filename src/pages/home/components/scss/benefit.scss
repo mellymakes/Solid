@@ -1,0 +1,49 @@
+@import '../../../../main.scss';
+.mhb {
+  background-color: c(sec);
+  padding: 40px 0;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 50px;
+  }
+
+  &__box {
+    display: grid;
+    grid-template-columns: 1fr;
+    color: c(text);
+  }
+
+  &__boxtitle {
+    text-align: center;
+  }
+  &__box-desc {
+    font-weight: 200;
+  }
+
+  &__svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+      fill: c(text);
+      width: 60px;
+    }
+  }
+}
+
+@media (min-width: 500px) {
+  .mhb {
+    &__grid {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    &__svg {
+      justify-content: left;
+    }
+    &__boxtitle {
+      text-align: left;
+      margin: 10px 0;
+    }
+  }
+}

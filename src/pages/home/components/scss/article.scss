@@ -1,0 +1,122 @@
+@import '../../../../main.scss';
+
+.ab {
+  padding: 40px 0;
+  color: c(text);
+  margin-top: 100px;
+
+  &__grid-right {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+  }
+
+  &__grid-left {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-areas: 'text img';
+
+    .ab__img {
+      grid-area: img;
+    }
+
+    .ab__texts {
+      grid-area: text;
+    }
+  }
+
+  &__img {
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__texts {
+    padding: 0 60px;
+
+    p {
+      font-size: 17px;
+      line-height: 1.6em;
+      font-weight: 200;
+    }
+  }
+
+  &__title h1 {
+    margin: 0;
+    margin-bottom: 30px;
+    font-size: 35px;
+  }
+}
+
+.abb {
+  padding: 10px 10px;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  background-color: c(red);
+  border: none;
+  transition: 200ms background-color;
+  cursor: pointer;
+  margin-top: 40px;
+
+  &__text {
+    text-align: center;
+    font-size: 17px;
+    color: #fff;
+  }
+
+  &__svg {
+    @include grid-center;
+    justify-content: right;
+    svg {
+      display: inline;
+      width: 10px;
+      fill: #fff;
+    }
+  }
+
+  &:active {
+    background-color: darkred;
+    // display: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .ab {
+    &__grid-right {
+      grid-template-columns: 1fr;
+    }
+
+    &__grid-left {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        'img'
+        'text';
+    }
+    &__img {
+      width: 100%;
+      @include grid-center;
+      img {
+        width: 400px;
+      }
+    }
+    &__texts {
+      padding: 0;
+      margin-top: 40px;
+      text-align: center;
+    }
+  }
+  .abb {
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .ab__img img {
+    width: 200px;
+  }
+}

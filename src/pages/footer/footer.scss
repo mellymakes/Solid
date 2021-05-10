@@ -1,0 +1,107 @@
+@import '../../main.scss';
+
+.mf {
+  background-color: c(sec);
+  padding: 20px;
+  padding-bottom: 5px;
+  &__logo {
+    @include grid-center;
+    img {
+      width: 80px;
+    }
+  }
+
+  &__nav {
+    max-width: 400px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+    grid-column-gap: 30px;
+    grid-row-gap: 20px;
+    text-align: center;
+    margin: 40px auto;
+    margin-bottom: 60px;
+
+    a {
+      color: c(text);
+      text-decoration: none;
+      font-weight: 700;
+      cursor: pointer;
+    }
+  }
+
+  &__bottom {
+    text-align: center;
+    font-size: 15px;
+  }
+}
+
+.mfsoscm {
+  margin: 30px auto;
+  max-width: 300px;
+
+  &__grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  &__box {
+    @include grid-center;
+  }
+
+  &__ball {
+    width: 50px;
+    height: 50px;
+    border: 3px solid c(text);
+    border-radius: 50%;
+
+    @include grid-center;
+
+    svg {
+      width: 25px;
+      fill: c(text);
+    }
+
+    &:hover {
+      background: c(text);
+
+      svg {
+        fill: c(sec);
+      }
+    }
+  }
+}
+
+.fb {
+  svg {
+    width: 15px;
+  }
+}
+
+@media (min-width: 600px) {
+  .mf {
+    &__logo {
+      img {
+        width: 90px;
+      }
+    }
+
+    &__nav {
+      // font-size: ;
+    }
+  }
+  .mfsoscm {
+    &__ball {
+      width: 50px;
+      height: 50px;
+      svg {
+        width: 25px;
+      }
+    }
+  }
+
+  .fb svg {
+    width: 15px;
+  }
+}

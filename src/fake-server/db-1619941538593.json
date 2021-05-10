@@ -1,0 +1,142 @@
+{
+  "hire": [
+    {
+      "id": 1,
+      "name": "1 Year Plan",
+      "requirements": [
+        "req1",
+        "req2",
+        "req3",
+        "req4",
+        "req5",
+        "req6"
+      ],
+      "check": [
+        true,
+        true,
+        true,
+        false,
+        false,
+        false
+      ],
+      "price": 1000000
+    },
+    {
+      "id": 2,
+      "name": "2 Year Plan",
+      "requirements": [
+        "req1",
+        "req2",
+        "req3",
+        "req4",
+        "req5",
+        "req6"
+      ],
+      "check": [
+        true,
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "price": 2000000
+    },
+    {
+      "id": 3,
+      "name": "3 Year Plan",
+      "requirements": [
+        "req1",
+        "req2",
+        "req3",
+        "req4",
+        "req5",
+        "req6"
+      ],
+      "check": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "price": 3000000
+    }
+  ],
+  "store": [
+    {
+      "id": 1,
+      "name": "shovel",
+      "price": 1000000,
+      "img": "shovel"
+    },
+    {
+      "id": 2,
+      "name": "iron wire",
+      "price": 1000000,
+      "img": "iron wire"
+    },
+    {
+      "id": 3,
+      "name": "cement",
+      "price": 1000000,
+      "img": "cement"
+    },
+    {
+      "id": 4,
+      "name": "stones",
+      "price": 1000000,
+      "img": "stones"
+    },
+    {
+      "id": 5,
+      "name": "sand",
+      "price": 1000000,
+      "img": "sand"
+    },
+    {
+      "id": 6,
+      "name": "iron pipes",
+      "price": 1000000,
+      "img": "iron pipes"
+    }
+  ],
+  "teams": [
+    {
+      "id": 1,
+      "name": "john doe",
+      "position": "ceo",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum condimentum in lectus vel molestie. Vestibulum lacinia justo nec elit sagittis, in vehicula justo elementum. Cras vulputate purus et odio egestas, vel mattis felis varius. Praesent eget massa finibus, semper ante non, ornare orci. Etiam ante tortor, sagittis vitae sollicitudin ac,",
+      "img": "ceo"
+    },
+    {
+      "id": 2,
+      "name": "eric hansen",
+      "position": "coo",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum condimentum in lectus vel molestie. Vestibulum lacinia justo nec elit sagittis, in vehicula justo elementum. Cras vulputate purus et odio egestas, vel mattis felis varius. Praesent eget massa finibus, semper ante non, ornare orci. Etiam ante tortor, sagittis vitae sollicitudin ac, ",
+      "img": "coo"
+    },
+    {
+      "id": 3,
+      "name": "Magnus Carlsen",
+      "position": "cfo",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum condimentum in lectus vel molestie. Vestibulum lacinia justo nec elit sagittis, in vehicula justo elementum. Cras vulputate purus et odio egestas, vel mattis felis varius. Praesent eget massa finibus, semper ante non, ornare orci. Etiam ante tortor, sagittis vitae sollicitudin ac, ",
+      "img": "cfo"
+    },
+    {
+      "id": 4,
+      "name": "Levy Rozman",
+      "position": "cao",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum condimentum in lectus vel molestie. Vestibulum lacinia justo nec elit sagittis, in vehicula justo elementum. Cras vulputate purus et odio egestas, vel mattis felis varius. Praesent eget massa finibus, semper ante non, ornare orci. Etiam ante tortor, sagittis vitae sollicitudin ac, ",
+      "img": "cao"
+    },
+    {
+      "id": 5,
+      "name": "Hikaru Nakamura",
+      "position": "cio",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum condimentum in lectus vel molestie. Vestibulum lacinia justo nec elit sagittis, in vehicula justo elementum. Cras vulputate purus et odio egestas, vel mattis felis varius. Praesent eget massa finibus, semper ante non, ornare orci. Etiam ante tortor, sagittis vitae sollicitudin ac, ",
+      "img": "cio"
+    }
+  ]
+}

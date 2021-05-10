@@ -1,0 +1,190 @@
+@import '../../../../main.scss';
+.mtt {
+  position: relative;
+  min-height: 500px;
+}
+
+.mttm {
+  width: 100%;
+  display: flex;
+  position: relative;
+  background-color: c(sec);
+  color: c(text);
+  justify-content: space-around;
+  margin: 100px 0;
+  margin-bottom: 0;
+  border-radius: 5px;
+  border: 1px solid black;
+  min-height: 80px;
+  z-index: 100;
+
+  &__op {
+    // @include grid-center;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    cursor: pointer;
+    h2 {
+      pointer-events: none;
+    }
+  }
+
+  &__marker {
+    position: absolute;
+    width: 0;
+    height: 4px;
+    background-color: c(red);
+    bottom: 15px;
+    transition: all 400ms;
+    // transition: width 400ms;
+  }
+
+  &__arrow {
+    display: none;
+  }
+}
+
+.mttmd {
+  position: absolute;
+  left: 0;
+  right: 0;
+  transform: translateY(-5px);
+  overflow: hidden;
+  background: c(sec);
+  border: 1px solid c(text);
+  height: 0;
+  transition: 400ms height;
+
+  &__active {
+    background: c(red);
+    color: #fff;
+  }
+
+  &__op {
+    padding: 5px;
+    font-size: 23px;
+    @include grid-center;
+
+    h2 {
+      pointer-events: none;
+    }
+  }
+
+  &--active {
+    height: 550px;
+  }
+}
+
+.mtd {
+  background: c(sec);
+  width: 100%;
+  min-height: 500px;
+  margin: 80px 0;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  grid-template-areas: 'text img';
+
+  &__img {
+    grid-area: img;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center center;
+  }
+  &__texts {
+    grid-area: text;
+    padding: 20px;
+
+    h1,
+    h3 {
+      text-align: center;
+      font-size: 25px;
+    }
+    h1 {
+      font-size: 35px;
+    }
+    p {
+      font-size: 19px;
+      line-height: 1.6em;
+    }
+  }
+}
+
+@media (max-width: 840px) {
+  .mttm {
+    cursor: pointer;
+
+    &__op {
+      display: none;
+    }
+    &__active {
+      display: block;
+      font-size: 25px;
+      color: c(red);
+      padding: 0px;
+    }
+    &__arrow {
+      display: block;
+      position: absolute;
+      top: 55%;
+      transform: translateY(-50%);
+      right: 30px;
+
+      svg {
+        transform: rotateZ(90deg);
+        z-index: 55000;
+        fill: red;
+        width: 20px;
+        transition: 200ms transform;
+      }
+
+      &--active {
+        svg {
+          transform: rotateZ(-90deg);
+        }
+      }
+    }
+    &__marker {
+      display: none;
+    }
+  }
+
+  .mtd {
+    grid-template-columns: 1fr;
+    grid-template-areas: 'img' 'text';
+
+    &__img {
+      min-height: 300px;
+      background-size: contain;
+    }
+    &__texts {
+      h1 {
+        font-size: 40px;
+      }
+
+      P {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .mtd {
+    &__img {
+      background-size: cover;
+    }
+
+    &__texts {
+      h1 {
+        font-size: 30px;
+      }
+      h3 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 17px;
+      }
+    }
+  }
+}
